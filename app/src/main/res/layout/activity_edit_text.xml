@@ -8,6 +8,7 @@
 
     <Button
         android:id="@+id/button_change_language"
+        android:text="@string/buttonText_language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -15,18 +16,20 @@
         android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_country"
-        tools:text="@string/buttonText_language" />
+         />
 
     <EditText
         android:id="@+id/edit_text_country"
+        android:text="@string/editText_country"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="input language"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/editText_country" />
+         />
 
     <TextView
         android:id="@+id/text_view_language"
+        android:text="@string/textView_language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -34,6 +37,6 @@
         android:layout_marginRight="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_country"
-        tools:text="@string/textView_language" />
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
