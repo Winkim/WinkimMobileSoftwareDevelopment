@@ -26,9 +26,31 @@ public class EditTextActivity extends AppCompatActivity {
         button_change_language.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button_change_language.setText(edit_text_country.getText().toString());
-                
-                text_view_language.setText(edit_text_country.getText().toString());
+                switch (edit_text_country.getText().toString())
+                {
+                    case "语言" :
+                        button_change_language.setText(R.string.change_language_cn);
+                        text_view_language.setText(R.string.language_cn);
+                        break;
+
+                    case "Language"  :
+                        button_change_language.setText(R.string.change_language_en);
+                        text_view_language.setText(R.string.language_en);
+                        break;
+
+                    case "言語"   :
+                        button_change_language.setText(R.string.change_language_jp);
+                        text_view_language.setText(R.string.language_jp);
+                        break;
+
+                    case "언어" :
+                        button_change_language.setText(R.string.change_language_kr);
+                        text_view_language.setText(R.string.language_kr);
+                        break;
+
+                    default:break;
+                }
+
             }
         });
     }
