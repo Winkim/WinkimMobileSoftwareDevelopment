@@ -3,12 +3,33 @@ package com.example.casper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class EditTextActivity extends AppCompatActivity {
 
+    private Button button_change_language;
+    private EditText edit_text_country;
+    private TextView text_view_language;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_text);
+
+        button_change_language=this.findViewById(R.id.button_change_language);
+        edit_text_country=this.findViewById(R.id.edit_text_country);
+        text_view_language=this.findViewById(R.id.text_view_language);
+
+
+        button_change_language.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button_change_language.setText(edit_text_country.getText().toString());
+                
+                text_view_language.setText(edit_text_country.getText().toString());
+            }
+        });
     }
 }
